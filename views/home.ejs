@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rujin Shrestha</title>
+    <%- include('partials/header') %>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/navbar') %>
+    </header>
+
+    <main>
+        <div id="to-top">
+            <a href="#">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+        <section id="home">
+            <p>Hi!</p>
+            <p>I am <span class="green">Rujin Shrestha.</span></p>
+            <button>Download Resume</button>
+            <div id="scroll-down">
+                <a href="#about">
+                    Scroll down
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION  -->
+
+        <section id="about">
+            <div class="content two-columns">
+                <div class="content-text">
+                    <p>I come from <span class="green">Kathmandu, Nepal</span> and I am currently a 3rd year Computer
+                        Science
+                        student at <span class="green">Vellore Institute of Technology.</span></p>
+                    <br>
+                    <p>I am an aspiring web developer who is extremely keen on learning something new and enjoy problem
+                        solving.
+                    </p>
+                    <br>
+                    <p>Experimenting and learning has always intrigued me and will always do so.</p>
+                </div>
+                <div class="content-img">
+                    <img src="imgs/undraw_programming.svg" alt="Speaker">
+                </div>
+            </div>
+            <div class="location">
+                ABOUT ME
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION  -->
+
+        <section id="skills">
+            <div class="content">
+                <p>List of <span class="green">Languages, </span><span class="green">Tools </span> and <span
+                        class="green">frameworks</span> that I have worked on and am fairly proficient.</p><br>
+                <div class="lang-tools">
+                    <div class="box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+                            alt="C programming" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                            alt="C++ programming" />
+                        <img src="imgs/java.svg" alt="Java Programming">
+                    </div>
+                    <div class="box">
+                        <img src="imgs/html.svg" alt="HTML">
+                        <img src="imgs/css.svg" alt="CSS">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                            alt="javascript">
+                    </div>
+                    <div class="box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                        <img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" alt="MySQL">
+                        <img src="imgs/nodejs.svg" alt="Node JS">
+                        <img src="imgs/express.svg" alt="Express" id="express">
+                        <img src="https://img.icons8.com/color/144/000000/mongodb.png" />
+                    </div>
+                    <div class="box">
+                        <img src="imgs/figma.svg" alt="figma">
+                        <img src="imgs/photoshop.svg" alt="photoshop">
+                        <img src="imgs/vegas pro.svg" alt="Sony Vegas pro">
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                SKILLS
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION  -->
+
+        <section id="projects">
+            <div class="content">
+                <p>Bunch of <span class="green">Work</span> I have done so far.
+            </div>
+            <div class="location">
+                PROJECTS
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION  -->
+
+        <section id="contact">
+            <div class="content two-columns">
+                <div class="content-text">
+                    <form action="#">
+                        <h2>Send a message?</h2>
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email ID</label>
+                            <input type="text" name="email" id="email" placeholder="Enter your email ID" required>
+                        </div>
+                        <div class="input">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="8" placeholder="Enter your message"
+                                required></textarea>
+                        </div>
+                        <button>Send message</button>
+                    </form>
+                </div>
+                <div class="content-img">
+                    <img src="imgs/vue-color-avatar2.png" alt="Speaker">
+                </div>
+            </div>
+            <div class="location">
+                CONTACT
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+        <script src="index.js"></script>
+</body>
+
+</html>
