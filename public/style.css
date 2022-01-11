@@ -404,6 +404,13 @@ section{
     text-transform: capitalize ;
     color: #03A062;
 }
+#portfolio-link{
+    cursor: pointer;
+}
+#alreadyHere{
+    position:absolute;
+    display: none;
+}
 /* Footer */
 footer{
     background-color: var(--footerBG);

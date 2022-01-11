@@ -121,3 +121,15 @@ function darkToLight() {
         document.querySelector('nav ul').style.fontWeight = '800'
     }, 1000)
 }
+// Portfolio live demo link
+const liveDemo = document.querySelector('#portfolio-link')
+const alreadyHere = document.querySelector('#alreadyHere')
+console.log(liveDemo)
+liveDemo.addEventListener('click',()=>{
+    console.log('clicked')
+    console.log(alreadyHere)
+    alreadyHere.style.display ='block'
+    setTimeout(()=>{
+        alreadyHere.style.display ='none'
+    },5000)
+})
