@@ -325,6 +325,85 @@ section{
     padding:1em;
     border-radius: 1em;
 }
+/* PROJECTS */
+#proj-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:1em;
+    width:100%;;
+}
+.proj{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 3em;
+    background-color: var(--boxBG);
+    padding:1em;
+    margin:1em;
+    width:30%;
+    min-width:25em;
+    min-height: 46em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+}
+.proj div{
+    width: 100%;
+    border-bottom:1px dashed var(--white);
+    padding:1em;
+    text-align: center;
+}
+.proj div:nth-child(1),.proj div:nth-child(2){
+    padding: 0;
+    margin:0;
+}
+/* No bottom border in the last section */
+.proj div:last-child,.proj div:first-child{
+    border:none;
+}
+.proj p{
+    text-align: center;
+}
+/* Assigning heights to each section of project card */
+.proj-img{
+    min-height: 30%;
+}
+.proj-title{
+    min-height: 10%;
+}
+.proj-tools{
+    min-height: 10%;
+}
+.proj-desc{
+    min-height: 40%;
+}
+.proj-link{
+    min-height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* - - - - - - - - - - -  */
+.proj-img img{
+    width: 100%;
+}
+.proj a{
+    background-color: #03A062;
+    color: white;
+    border-radius: 1em;
+    padding:0.2em 1em;
+    transition:200ms all;
+}
+.proj a:hover{
+    background-color: #0e76a8;
+}
+.tool{
+    margin:0 1em;
+    font-size: 1.2em;
+    text-transform: capitalize ;
+    color: #03A062;
+}
 /* Footer */
 footer{
     background-color: var(--footerBG);
