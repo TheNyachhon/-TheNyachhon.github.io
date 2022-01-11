@@ -244,9 +244,9 @@ section{
 }
 .content p{
     font-size: 0.9em;
-    word-spacing: 0.2em;
+    word-spacing: 0.5em;
     line-height: 2em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     text-align: justify;
 }
 /* Location */
