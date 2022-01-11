@@ -13,7 +13,7 @@ html{
     --formBG:whitesmoke;
     --black: #000000;
     --darkBG: #11111A;
-    --boxBG:#2E2E39;
+    --boxBG:rgba(46, 46, 57, 0.75);
     --logo:#03F062;
     --green:#00FF00;
     --location:#22222F88;
@@ -136,8 +136,6 @@ a{
 }
 #close-nav{
     display: none;
-}
-#close-nav{
     cursor: pointer;
 }
 #logo{
@@ -311,7 +309,13 @@ section{
     flex-wrap: wrap;
     align-items: center;
     /* background-color: #222222DD; */
+    /* background-color: var(--boxBG); */
+    /* Glass morphism */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
     background-color: var(--boxBG);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
     border-radius: 1em;
     padding:1em;
     margin:1em auto;
@@ -471,6 +475,9 @@ form button:hover{
         top:50%;
         left:90%;
         display: unset;
+    }
+    #close-nav i{
+        transition: 1.5s all;
     }
     .lang-tools img{
         width: 3.2em;

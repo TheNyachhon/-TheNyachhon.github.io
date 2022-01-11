@@ -35,8 +35,7 @@ setInterval(() => {
         for (let i = 0; i < len; i++) {
             section[i].addEventListener('click', () => {
                 nav.style.transform = 'translateX(-85%)'
-                toggleNavIcon.classList.remove('fa-chevron-left')
-                toggleNavIcon.classList.add('fa-chevron-right')
+                toggleNavIcon.style.transform = 'rotateY(0) scale(1)'
             })
         }
     } else {
@@ -45,11 +44,11 @@ setInterval(() => {
     }
 }, 0)
 function toggleNavBar() {
-    toggleNavIcon.classList.toggle('fa-chevron-left')
-    toggleNavIcon.classList.toggle('fa-chevron-right')
+    toggleNavIcon.style.transform = 'rotateY(0) scale(1)'
     if (nav.style.transform == 'translateX(0px)') {
         nav.style.transform = 'translateX(-85%)'
     } else {
+        toggleNavIcon.style.transform = 'rotateY(-180deg) scale(1.5)'
         nav.style.transform = 'translateX(0)'
     }
 }
@@ -90,7 +89,7 @@ function lightToDark() {
         root.style.setProperty('--whitesmoke', 'whitesmoke');
         root.style.setProperty('--formBG', 'whitesmoke');
         root.style.setProperty('--black', 'black');
-        root.style.setProperty('--boxBG', '#2E2E39');
+        root.style.setProperty('--boxBG', 'rgba(46, 46, 57, 0.75)');
         root.style.setProperty('--logo', '#03F062');
         root.style.setProperty('--green', '#00FF00');
         root.style.setProperty('--location', '#22222F88');
@@ -110,7 +109,7 @@ function darkToLight() {
         root.style.setProperty('--whitesmoke', '#11111A');
         root.style.setProperty('--formBG', '#373748');
         root.style.setProperty('--black', 'white');
-        root.style.setProperty('--boxBG', 'white');
+        root.style.setProperty('--boxBG', 'rgba(255, 255, 255, 0.4)');
         root.style.setProperty('--logo', '#11111A');
         root.style.setProperty('--green', '#03A062');
         root.style.setProperty('--location', '#D3D3D3');
