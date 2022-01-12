@@ -128,7 +128,7 @@ console.log(liveDemo)
 liveDemo.addEventListener('click',()=>{
     console.log('clicked')
     console.log(alreadyHere)
-    alreadyHere.style.display ='block'
+    alreadyHere.style.display ='inline'
     setTimeout(()=>{
         alreadyHere.style.display ='none'
     },5000)
