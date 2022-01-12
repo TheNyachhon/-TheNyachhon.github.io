@@ -124,7 +124,6 @@ function darkToLight() {
 // Portfolio live demo link
 const liveDemo = document.querySelector('#portfolio-link')
 const alreadyHere = document.querySelector('#alreadyHere')
-console.log(liveDemo)
 liveDemo.addEventListener('click',()=>{
     console.log('clicked')
     console.log(alreadyHere)
