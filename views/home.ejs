@@ -106,26 +106,28 @@
         </section>
 
         <!-- CONTACT SECTION  -->
-
         <section id="contact">
+            <%if(sent.message=='sent'){%>
+                <%- include('partials/redirect') %>
+            <%}%>
             <div class="content two-columns">
                 <div class="content-text">
-                    <form action="#">
+                    <form action="/sendmessage" method="post">
                         <h2>Send a message?</h2>
                         <div class="input">
                             <label for="name">Name</label>
-                            <input disabled type="text" name="name" id="name" placeholder="Enter your name" required>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required>
                         </div>
                         <div class="input">
                             <label for="email">Email ID</label>
-                            <input disabled type="text" name="email" id="email" placeholder="Enter your email ID" required>
+                            <input type="text" name="email" id="email" placeholder="Enter your email ID" required>
                         </div>
                         <div class="input">
                             <label for="message">Message</label>
-                            <textarea disabled name="message" id="message" rows="8" placeholder="Enter your message"
+                            <textarea name="message" id="message" rows="8" placeholder="Enter your message"
                                 required></textarea>
                         </div>
-                        <button disabled>Send message</button>
+                        <button>Send message</button>
                     </form>
                 </div>
                 <div class="content-img">

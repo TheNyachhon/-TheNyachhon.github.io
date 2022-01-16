@@ -1,0 +1,31 @@
+<head>
+    <title>redirect</title>
+    <script type="text/javascript">
+        setTimeout(() => {
+            window.location.href = "https://rujinshrestha.herokuapp.com/"
+        }, 5000)
+    </script>
+</head>
+
+<body>
+    <div id="confirmation">
+        <div id="message-box">
+            <i class="far fa-check-circle"></i>
+            Thanks! Your message has been delivered!
+            <div>
+                <p>Message self-desctructing in <span id="closing"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const closing = document.querySelector('#closing')
+        let count = 5
+        closing.innerText = count;
+        setInterval(()=>{
+            count--;
+            closing.innerText = count;
+        },1000)
+    </script>
+</body>
+
+</html>
