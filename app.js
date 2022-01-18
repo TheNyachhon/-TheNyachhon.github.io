@@ -1,11 +1,18 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const session = require('express-session')
+const flash = require('connect-flash')
 require('dotenv').config()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(session({
+    secret:process.env.Secret,
+    resave:false,
+    saveUninitialized:false
+}))
+app.use(flash())
 
 // Database
 const {Messages} = require('./database')
@@ -24,8 +31,7 @@ mongoose.connect(connectionURL)
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    const sent = req.query;
-    res.render('home',{sent})
+    res.render('home',{message:req.flash('message')})
 })
 
 app.get('*',(req,res)=>{
@@ -36,16 +42,9 @@ app.listen(process.env.PORT || 3000 , () => {
     console.log("Listening on port 3000");
 })
 
-app.post("/sendmessage",(req,res)=>{
-    const name = req.body.name;
-    const email = req.body.email;
-    const message= req.body.message;
-
-    const newMessage = new Messages({
-        Name:name,
-        Email:email,
-        Message:message
-    })
-    newMessage.save();
-    res.redirect('/?message=sent')
+app.post("/sendmessage",async(req,res)=>{
+    const newMessage = new Messages(req.body)
+    await newMessage.save();
+    req.flash('message','sent')
+    res.redirect('/')
 })
